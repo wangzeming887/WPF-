@@ -1,0 +1,18 @@
+﻿<Window x:Class="WPF学习.复选框练习"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF学习"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="复选框练习" Height="450" Width="800">
+    <StackPanel x:Name="Mypannel" >
+        <TextBlock Text="你今天的梦想是什么？(最多选三个)" Margin="5"  />
+        <CheckBox Content="国泰民安"  Margin="5" Checked="OnChecked"/>
+        <CheckBox Content="一夜暴富"  Margin="5" Checked="OnChecked" />
+        <CheckBox Content="灯红酒绿"  Margin="5" Checked="OnChecked"/>
+        <CheckBox Content="有酒有肉"  Margin="5" Checked="OnChecked"/>
+        <Button Content="确认" Width="60" HorizontalAlignment="Left" Margin="5" Click="Button_Click"/>
+    </StackPanel>
+</Window>

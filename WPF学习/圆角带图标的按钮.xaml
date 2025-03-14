@@ -1,0 +1,39 @@
+﻿<Window x:Class="WPF学习.圆角带图标的按钮"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF学习"
+        mc:Ignorable="d"
+        Title="圆角带图标的按钮" Height="450" Width="800">
+    <Canvas>
+        <Button Canvas.Left="20" Canvas.Top="30" Width="150" Height="40" >
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
+                <Image Source="Images/11.png" Grid.Column="0" Width="50"/>
+                <TextBlock  Grid.Column="1" Text="图片按钮" FontSize="20" VerticalAlignment="Center"/>
+            </Grid>
+        </Button>
+
+        <Button Canvas.Left="20" Canvas.Top="80" Width="200" Height="40" Click="Button_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border CornerRadius="8" BorderThickness="1" BorderBrush="{TemplateBinding BorderBrush}">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition Width="150"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Source="Images/11.png" Grid.Column="0" Width="30" Height="30"/>
+                            <TextBlock  Grid.Column="1" Text="图片圆角按钮" FontSize="20" VerticalAlignment="Center"/>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+            
+        </Button>
+    </Canvas>
+</Window>
